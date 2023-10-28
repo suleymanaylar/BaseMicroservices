@@ -23,6 +23,7 @@ namespace FreeCourse.IdentityServer.Services
             {
                 var errors = new Dictionary<string, object>();
                 errors.Add("errors", new List<string> { "Email veya Şifreniz Yanlış" });
+                context.Result.CustomResponse = errors;
 
                 return;
             }
@@ -31,6 +32,7 @@ namespace FreeCourse.IdentityServer.Services
             {
                 var errors = new Dictionary<string, object>();
                 errors.Add("errors", new List<string> { "Email veya Şifreniz Yanlış" });
+                context.Result.CustomResponse = errors;
 
                 return;
             }
