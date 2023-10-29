@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentitiyServer", "Identiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.IdentityServer", "IdentityServer\FreeCourse.IdentityServer\FreeCourse.IdentityServer.csproj", "{4D85691A-96E1-443F-AC30-2D8FF1942827}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStcok", "PhotoStcok", "{15A9E4DF-6CF2-4335-A5E1-DA9411B0F321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.PhotoStock", "Services\PhotoStock\FreeCourse.Services.PhotoStock\FreeCourse.Services.PhotoStock.csproj", "{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,10 @@ Global
 		{4D85691A-96E1-443F-AC30-2D8FF1942827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D85691A-96E1-443F-AC30-2D8FF1942827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D85691A-96E1-443F-AC30-2D8FF1942827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +57,8 @@ Global
 		{DBDF25E8-2DDF-4870-BE6F-4DDC9AD46A9F} = {27DBC966-6A9D-47B0-880D-F60E324FD60A}
 		{76FD3D3B-4641-4495-A999-572EF64660D5} = {3BDB7710-8084-4569-8E1E-A421D7EA6605}
 		{4D85691A-96E1-443F-AC30-2D8FF1942827} = {8F0D7C43-9D0B-4915-8FA3-DC81AACD8E70}
+		{15A9E4DF-6CF2-4335-A5E1-DA9411B0F321} = {926A1568-EF32-4AF8-BAB5-C471209CD3CD}
+		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0} = {15A9E4DF-6CF2-4335-A5E1-DA9411B0F321}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2275708A-12AD-4522-9A38-1E8A73D45EB3}

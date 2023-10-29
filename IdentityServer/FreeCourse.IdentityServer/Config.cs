@@ -33,7 +33,7 @@ namespace FreeCourse.IdentityServer
             new ApiScope[]
             {
                 new ApiScope("catalog_fullpermission","Catalog API için full erişim"),
-                new ApiScope("photo_fullpermission","Photo Stock API için full erişim"),
+                new ApiScope("photo_stock_fullpermission","Photo Stock API için full erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -46,7 +46,7 @@ namespace FreeCourse.IdentityServer
                     ClientId="WebMvcClient",
                     ClientSecrets={new Secret("secret".Sha512())},
                     AllowedGrantTypes=GrantTypes.ClientCredentials,
-                    AllowedScopes={"catalog_fullpermission","photo_fullpermission",IdentityServerConstants.LocalApi.ScopeName }
+                    AllowedScopes={"catalog_fullpermission", "photo_stock_fullpermission", IdentityServerConstants.LocalApi.ScopeName }
 
                 },
                  new Client
