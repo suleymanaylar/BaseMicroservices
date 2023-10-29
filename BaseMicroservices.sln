@@ -24,7 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.IdentityServer",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStcok", "PhotoStcok", "{15A9E4DF-6CF2-4335-A5E1-DA9411B0F321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.PhotoStock", "Services\PhotoStock\FreeCourse.Services.PhotoStock\FreeCourse.Services.PhotoStock.csproj", "{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeCourse.Services.PhotoStock", "Services\PhotoStock\FreeCourse.Services.PhotoStock\FreeCourse.Services.PhotoStock.csproj", "{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{03400E77-A3A3-4661-B75C-9960E73F433B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeCourse.Services.Basket", "Services\Basket\FreeCourse.Services.Basket\FreeCourse.Services.Basket.csproj", "{B778C633-E768-445A-8535-960C74D0336B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,10 @@ Global
 		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B778C633-E768-445A-8535-960C74D0336B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B778C633-E768-445A-8535-960C74D0336B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B778C633-E768-445A-8535-960C74D0336B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B778C633-E768-445A-8535-960C74D0336B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{4D85691A-96E1-443F-AC30-2D8FF1942827} = {8F0D7C43-9D0B-4915-8FA3-DC81AACD8E70}
 		{15A9E4DF-6CF2-4335-A5E1-DA9411B0F321} = {926A1568-EF32-4AF8-BAB5-C471209CD3CD}
 		{916D1026-92BE-4AB4-A3F3-13DC2A5EFBC0} = {15A9E4DF-6CF2-4335-A5E1-DA9411B0F321}
+		{03400E77-A3A3-4661-B75C-9960E73F433B} = {926A1568-EF32-4AF8-BAB5-C471209CD3CD}
+		{B778C633-E768-445A-8535-960C74D0336B} = {03400E77-A3A3-4661-B75C-9960E73F433B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2275708A-12AD-4522-9A38-1E8A73D45EB3}
