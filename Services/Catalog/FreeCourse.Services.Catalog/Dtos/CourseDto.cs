@@ -17,7 +17,7 @@ namespace FreeCourse.Services.Catalog.Dtos
         public string Picture { get; set; }
 
 
-        public Feature Feature { get; set; }
+        public FeatureDto Feature { get; set; }
 
         public string CategoryId { get; set; }
 
