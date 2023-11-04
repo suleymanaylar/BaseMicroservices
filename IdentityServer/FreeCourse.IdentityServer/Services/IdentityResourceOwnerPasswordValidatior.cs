@@ -28,7 +28,7 @@ namespace FreeCourse.IdentityServer.Services
                 return;
             }
             var passwordCheck = await _userManager.CheckPasswordAsync(existUser, context.Password);
-            if (passwordCheck == null)
+            if (!passwordCheck)
             {
                 var errors = new Dictionary<string, object>();
                 errors.Add("errors", new List<string> { "Email veya Şifreniz Yanlış" });
