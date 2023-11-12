@@ -1,10 +1,8 @@
-﻿using FreeCourse.Services.Catalog.Models;
-using MongoDB.Bson.Serialization.Attributes;
-using System;
+﻿using System;
 
-namespace FreeCourse.Services.Catalog.Dtos
+namespace FreeCourse.Web.Models.Catalog
 {
-    public class CourseDto
+    public class CourseViewModel
     {
         public string Id { get; set; }
 
@@ -17,10 +15,10 @@ namespace FreeCourse.Services.Catalog.Dtos
         public string Picture { get; set; }
 
 
-        public FeatureDto Feature { get; set; }
+        public FeatureViewModel Feature { get; set; }
 
         public string CategoryId { get; set; }
 
-        public CategoryDto Category { get; set; }
+        public CategoryViewModel Category { get; set; }
     }
 }

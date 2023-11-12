@@ -150,7 +150,7 @@ namespace FreeCourse.Web.Services
             authenticationProperties.StoreTokens(new List<AuthenticationToken>()
             {
                 new AuthenticationToken{Name=OpenIdConnectParameterNames.AccessToken,Value=token.AccessToken},
-                new AuthenticationToken{Name=OpenIdConnectParameterNames.AccessToken,Value=token.RefreshToken},
+                new AuthenticationToken{Name=OpenIdConnectParameterNames.RefreshToken,Value=token.RefreshToken},
                 new AuthenticationToken{Name=OpenIdConnectParameterNames.ExpiresIn,Value=DateTime.Now.AddSeconds(token.ExpiresIn).ToString("o",CultureInfo.InvariantCulture)}
             });
 
