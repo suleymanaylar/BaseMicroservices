@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FreeCourse.Web.Models.Catalog
+namespace FreeCourse.Web.Models.Catalogs
 {
     public class CourseViewModel
     {
