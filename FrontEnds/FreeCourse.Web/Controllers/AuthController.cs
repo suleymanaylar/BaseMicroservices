@@ -45,7 +45,7 @@ namespace FreeCourse.Web.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             await _identityService.RevokeDefreshToken();
-            return RedirectToAction(nameof(HomeController.Index),"Homme");
+            return RedirectToAction(nameof(HomeController.Index),"Home");
         }
     }
 }
