@@ -11,12 +11,13 @@ namespace FreeCourse.Web.Services
     public class BasketService : IBasketService
     {
         private readonly HttpClient _httpClient;
-        
+        private readonly IDiscountService _discountService;
 
-        public BasketService(HttpClient httpClient )
+
+        public BasketService(HttpClient httpClient, IDiscountService discountService)
         {
             _httpClient = httpClient;
-        
+            _discountService = discountService;
         }
 
         public async Task AddBasketItem(BasketItemViewModel basketItemViewModel)
@@ -50,13 +51,13 @@ namespace FreeCourse.Web.Services
                 return false;
             }
 
-            //var hasDiscount = await _discountService.GetDiscount(discountCode);
-            //if (hasDiscount == null)
-            //{
-            //    return false;
-            //}
+            var hasDiscount = await _discountService.GetDiscount(discountCode);
+            if (hasDiscount == null)
+            {
+                return false;
+            }
 
-            //basket.ApplyDiscount(hasDiscount.Code, hasDiscount.Rate);
+            basket.ApplyDiscount(hasDiscount.Code, hasDiscount.Rate);
             await SaveOrUpdateBasket(basket);
             return true;
         }
@@ -70,7 +71,7 @@ namespace FreeCourse.Web.Services
                 return false;
             }
 
-            //basket.CancelDiscount();
+            basket.CancelDiscount();
             await SaveOrUpdateBasket(basket);
             return true;
         }
@@ -129,9 +130,18 @@ namespace FreeCourse.Web.Services
 
         public async Task<bool> SaveOrUpdateBasket(BasketViewModel basketViewModel)
         {
-            var response = await _httpClient.PostAsJsonAsync<BasketViewModel>("baskets", basketViewModel);
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync<BasketViewModel>("baskets", basketViewModel);
+                return response.IsSuccessStatusCode;
 
-            return response.IsSuccessStatusCode;
+            }
+            catch (System.Exception ex)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

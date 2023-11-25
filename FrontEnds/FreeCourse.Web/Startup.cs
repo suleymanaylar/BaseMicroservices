@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using FreeCourse.Shared.Services;
 using FreeCourse.Web.Extensions;
 using FreeCourse.Web.Handler;
@@ -5,6 +6,7 @@ using FreeCourse.Web.Helpers;
 using FreeCourse.Web.Models;
 using FreeCourse.Web.Services;
 using FreeCourse.Web.Services.Interfaces;
+using FreeCourse.Web.Validatiors;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -53,7 +55,9 @@ namespace FreeCourse.Web
                     opt.SlidingExpiration = true;
                     opt.Cookie.Name = "MicroServicesBaseCookie";
                 });
-
+            services.AddControllersWithViews().
+                AddFluentValidation(fv=>
+                fv.RegisterValidatorsFromAssemblyContaining<CourseCreateInputValidator>());
             services.AddControllersWithViews();
         }
 
