@@ -22,6 +22,7 @@ namespace FreeCourse.Web.Handler
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer",await _clientCredentialTokeService.GetToken());
 
             var response= await base.SendAsync(request, cancellationToken);
+            
             if (response.StatusCode==System.Net.HttpStatusCode.Unauthorized)
             {
                 throw new UnAuthorizeException();
